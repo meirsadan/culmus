@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calligrapher</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <canvas id="calligrapherCanvas" resize></canvas>
+
+        <div id="svgs">
+
+            <svg version="1.1" id="alefSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+                <path class="st0" d="M269,103.2C408.6,216.7,513.9,331,598.9,494.9"/>
+                <path class="st0" d="M512.5,354.7c57.7-94.5,63.7-172.4,57.4-251.5"/>
+                <path class="st0" d="M356.2,186.1c-58.1,63.2-87.1,156.6-77.7,308.8"/>
+            </svg>
+
+            <svg version="1.1" id="betSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+                <path class="st0" d="M272.3,106.9l82.5-1.3c123.4,0,160.1,56.7,160.1,194v182.2"/>
+                <line class="st0" x1="259.9" y1="489.7" x2="581.9" y2="489.7"/>
+            </svg>
+
+        </div>
+
+        <script src="js/vendor/opentype.min.js"></script>
+        <script src="js/vendor/paper-full.js"></script>
+        <script src="js/vendor/Tween.js"></script>
+        <script src="js/calligrapher.js"></script>
+    </body>
+</html>
