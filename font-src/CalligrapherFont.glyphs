@@ -1,15 +1,41 @@
 {
 .appVersion = "1230";
 DisplayStrings = (
-"/yod-hb"
+"/yod-hb",
+"/alef-hb/bet-hb/gimel-hb/dalet-hb/he-hb/vav-hb/zayin-hb/het-hb/tet-hb/yod-hb/finalkaf-hb/kaf-hb/lamed-hb/finalmem-hb/mem-hb/finalnun-hb/nun-hb/samekh-hb/ayin-hb/finalpe-hb/pe-hb/finaltsadi-hb/tsadi-hb/qof-hb/resh-hb/shin-hb/tav-hb",
+"/alef-hb"
 );
 date = "2019-07-18 22:28:03 +0000";
 familyName = CalligrapherFont;
 fontMaster = (
 {
+alignmentZones = (
+"{500, 15}",
+"{0, -40}"
+);
 ascender = 750;
 capHeight = 750;
+customParameters = (
+{
+name = shoulderHeight;
+value = "410";
+}
+);
 descender = -250;
+guideLines = (
+{
+angle = 45;
+position = "{251, 158}";
+},
+{
+angle = 240;
+position = "{290, 302}";
+},
+{
+angle = 60;
+position = "{617, 248}";
+}
+);
 id = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 xHeight = 500;
 }
@@ -17,762 +43,708 @@ xHeight = 500;
 glyphs = (
 {
 glyphname = "alef-hb";
-lastChange = "2019-10-03 09:56:47 +0000";
+lastChange = "2019-10-03 19:05:01 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {754, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/alef-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -230}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"347 297 OFFCURVE",
+"482 168 OFFCURVE",
+"561 -11 CURVE",
+"621 92 LINE",
+"535 267 OFFCURVE",
+"403 391 OFFCURVE",
+"217 540 CURVE",
+"159 440 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
+"530 398 OFFCURVE",
+"524 318 OFFCURVE",
+"470 224 CURVE",
+"568 303 LINE",
+"617 392 OFFCURVE",
+"615 475 OFFCURVE",
+"576 554 CURVE",
+"491 479 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
+"158 198 OFFCURVE",
+"174 62 OFFCURVE",
+"221 0 CURVE",
+"272 109 LINE",
+"245 201 OFFCURVE",
+"246 293 OFFCURVE",
+"304 393 CURVE",
+"201 284 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"193 0 OFFCURVE",
+"250 0 OFFCURVE",
+"306 0 CURVE",
+"363 109 LINE",
+"307 109 OFFCURVE",
+"250 109 OFFCURVE",
+"194 109 CURVE",
+"137 0 LINE"
 );
 }
 );
-width = 600;
+width = 753;
 }
 );
 unicode = 05D0;
 },
 {
 glyphname = "bet-hb";
-lastChange = "2019-10-03 10:01:51 +0000";
+lastChange = "2019-10-03 19:19:30 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {601, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/bet-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -262}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
+"167 568 LINE",
+"126 500 LINE",
+"145 420 LINE",
+"186 488 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"284 410 LINE SMOOTH",
+"375 410 OFFCURVE",
+"388 386 OFFCURVE",
+"388 248 CURVE SMOOTH",
+"388 12 LINE",
+"464 137 LINE",
+"464 353 LINE SMOOTH",
+"464 454 OFFCURVE",
+"426 500 OFFCURVE",
+"332 500 CURVE SMOOTH",
+"126 500 LINE",
+"73 410 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"493 0 LINE",
+"545 90 LINE",
+"107 90 LINE",
+"55 0 LINE"
 );
 }
 );
-width = 530;
+width = 603;
 }
 );
 unicode = 05D1;
 },
 {
 glyphname = "gimel-hb";
-lastChange = "2019-10-03 10:02:17 +0000";
+lastChange = "2019-10-03 19:14:13 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {427, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/gimel-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -233}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"214 373 OFFCURVE",
+"254 336 OFFCURVE",
+"269 170 CURVE SMOOTH",
+"286 -15 LINE",
+"342 82 LINE",
+"326 273 LINE SMOOTH",
+"313 428 OFFCURVE",
+"269 469 OFFCURVE",
+"145 542 CURVE",
+"92 451 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"136 -12 OFFCURVE",
+"220 41 OFFCURVE",
+"293 202 CURVE",
+"299 259 LINE",
+"227 142 OFFCURVE",
+"166 102 OFFCURVE",
+"87 92 CURVE",
+"49 -12 LINE"
 );
 }
 );
-width = 600;
+width = 427;
 }
 );
 unicode = 05D2;
 },
 {
 glyphname = "dalet-hb";
-lastChange = "2019-10-03 10:02:31 +0000";
+lastChange = "2019-10-03 19:20:14 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {618, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/dalet-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -240}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
+"167 568 LINE",
+"126 500 LINE",
+"145 420 LINE",
+"186 488 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"492 410 LINE",
+"563 499 LINE",
+"126 500 LINE",
+"73 410 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"401 -38 LINE",
+"477 37 LINE",
+"477 568 LINE",
+"401 478 LINE"
 );
 }
 );
-width = 600;
+width = 618;
 }
 );
 unicode = 05D3;
 },
 {
 glyphname = "he-hb";
-lastChange = "2019-10-03 10:02:18 +0000";
+lastChange = "2019-10-03 19:20:07 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {676, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/he-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -262}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"217 568 LINE",
+"176 500 LINE",
+"195 420 LINE",
+"236 488 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
+"394 410 LINE SMOOTH",
+"504 410 OFFCURVE",
+"518 386 OFFCURVE",
+"518 278 CURVE SMOOTH",
+"518 -38 LINE",
+"594 38 LINE",
+"594 353 LINE SMOOTH",
+"594 454 OFFCURVE",
+"553 500 OFFCURVE",
+"442 500 CURVE SMOOTH",
+"176 500 LINE",
+"123 410 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"152 126 OFFCURVE",
+"151 44 OFFCURVE",
+"151 -38 CURVE",
+"227 37 LINE",
+"227 124 OFFCURVE",
+"228 211 OFFCURVE",
+"235 298 CURVE",
+"159 208 LINE"
 );
 }
 );
-width = 600;
+width = 680;
 }
 );
 unicode = 05D4;
 },
 {
 glyphname = "vav-hb";
-lastChange = "2019-10-03 10:02:32 +0000";
+lastChange = "2019-10-03 19:18:26 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {308, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/vav-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -260}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"107 413 LINE SMOOTH",
+"143 381 OFFCURVE",
+"148 364 OFFCURVE",
+"148 288 CURVE SMOOTH",
+"148 -36 LINE",
+"224 40 LINE",
+"224 340 LINE SMOOTH",
+"224 432 OFFCURVE",
+"209 468 OFFCURVE",
+"175 496 CURVE SMOOTH",
+"105 552 LINE",
+"52 461 LINE"
 );
 }
 );
-width = 600;
+width = 312;
 }
 );
 unicode = 05D5;
 },
 {
 glyphname = "zayin-hb";
-lastChange = "2019-10-03 10:02:18 +0000";
+lastChange = "2019-10-03 19:25:50 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {429, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/zayin-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -230}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"172 413 OFFCURVE",
+"240 366 OFFCURVE",
+"301 307 CURVE",
+"355 395 LINE",
+"292 455 OFFCURVE",
+"226 507 OFFCURVE",
+"155 551 CURVE",
+"100 456 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
+"298 448 OFFCURVE",
+"250 456 OFFCURVE",
+"206 419 CURVE",
+"150 321 LINE",
+"193 366 OFFCURVE",
+"226 363 OFFCURVE",
+"301 307 CURVE",
+"355 395 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"211 243 LINE SMOOTH",
+"197 284 OFFCURVE",
+"172 326 OFFCURVE",
+"206 419 CURVE",
+"151 324 LINE",
+"120 266 OFFCURVE",
+"130 222 OFFCURVE",
+"156 148 CURVE SMOOTH",
+"220 -37 LINE",
+"275 58 LINE"
 );
 }
 );
-width = 600;
+width = 430;
 }
 );
 unicode = 05D6;
 },
 {
 glyphname = "het-hb";
-lastChange = "2019-10-03 10:02:32 +0000";
+lastChange = "2019-10-03 19:34:05 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {671, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/het-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, -54, -258}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
+"183 568 LINE",
+"142 500 LINE",
+"161 420 LINE",
+"202 488 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"350 410 LINE SMOOTH",
+"460 410 OFFCURVE",
+"474 386 OFFCURVE",
+"474 278 CURVE SMOOTH",
+"474 -38 LINE",
+"550 38 LINE",
+"550 353 LINE SMOOTH",
+"550 454 OFFCURVE",
+"509 500 OFFCURVE",
+"398 500 CURVE SMOOTH",
+"142 500 LINE",
+"89 410 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"125 311 OFFCURVE",
+"138 141 OFFCURVE",
+"127 -38 CURVE",
+"203 37 LINE",
+"214 228 OFFCURVE",
+"202 388 OFFCURVE",
+"173 519 CURVE",
+"89 410 LINE"
 );
 }
 );
-width = 600;
+width = 640;
 }
 );
 unicode = 05D7;
 },
 {
 glyphname = "tet-hb";
-lastChange = "2019-10-03 10:02:19 +0000";
+lastChange = "2019-10-03 19:33:52 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {742, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/tet-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, -40, -240}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"120 379 OFFCURVE",
+"111 392 OFFCURVE",
+"127 274 CURVE SMOOTH",
+"151 98 LINE SMOOTH",
+"164 7 OFFCURVE",
+"192 -15 OFFCURVE",
+"235 -15 CURVE SMOOTH",
+"342 -15 OFFCURVE",
+"455 39 OFFCURVE",
+"531 169 CURVE",
+"571 242 LINE",
+"469 153 OFFCURVE",
+"374 89 OFFCURVE",
+"270 89 CURVE SMOOTH",
+"231 89 OFFCURVE",
+"216 105 OFFCURVE",
+"211 158 CURVE SMOOTH",
+"193 340 LINE SMOOTH",
+"181 459 OFFCURVE",
+"174 477 OFFCURVE",
+"115 552 CURVE",
+"62 461 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"345 393 OFFCURVE",
+"389 416 OFFCURVE",
+"427 416 CURVE SMOOTH",
+"480 416 OFFCURVE",
+"523 353 OFFCURVE",
+"523 264 CURVE SMOOTH",
+"523 230 OFFCURVE",
+"515 192 OFFCURVE",
+"497 153 CURVE",
+"571 242 LINE",
+"585 277 OFFCURVE",
+"591 311 OFFCURVE",
+"591 342 CURVE SMOOTH",
+"591 441 OFFCURVE",
+"531 514 OFFCURVE",
+"460 514 CURVE SMOOTH",
+"424 514 OFFCURVE",
+"385 500 OFFCURVE",
+"350 462 CURVE",
+"295 339 LINE"
 );
 }
 );
-width = 600;
+width = 670;
 }
 );
 unicode = 05D8;
 },
 {
 glyphname = "yod-hb";
-lastChange = "2019-10-03 11:00:21 +0000";
+lastChange = "2019-10-03 19:28:19 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {327, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/yod-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -254}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"267 370 OFFCURVE",
-"283 352 OFFCURVE",
-"283 316 CURVE",
-"283 261 OFFCURVE",
-"247 180 OFFCURVE",
-"218 116 CURVE",
-"310 185 LINE",
-"354 254 OFFCURVE",
-"381 329 OFFCURVE",
-"381 384 CURVE",
-"381 446 OFFCURVE",
-"340 476 OFFCURVE",
-"259 521 CURVE",
-"196 411 LINE"
+"151 400 LINE SMOOTH",
+"172 379 OFFCURVE",
+"179 361 OFFCURVE",
+"179 336 CURVE SMOOTH",
+"179 301 OFFCURVE",
+"161 253 OFFCURVE",
+"129 181 CURVE",
+"219 259 LINE",
+"249 310 OFFCURVE",
+"272 363 OFFCURVE",
+"272 402 CURVE SMOOTH",
+"272 430 OFFCURVE",
+"254 452 OFFCURVE",
+"222 482 CURVE SMOOTH",
+"147 555 LINE",
+"72 475 LINE"
 );
 }
 );
-width = 600;
+width = 327;
 }
 );
 unicode = 05D9;
 },
 {
 glyphname = "finalkaf-hb";
-lastChange = "2019-10-03 10:02:20 +0000";
+lastChange = "2019-10-03 19:28:54 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {591, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/finalkaf-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -234}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"167 568 LINE",
+"126 500 LINE",
+"145 420 LINE",
+"186 488 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
+"462 410 LINE",
+"533 499 LINE",
+"126 500 LINE",
+"73 410 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"371 -228 LINE",
+"447 -153 LINE",
+"447 568 LINE",
+"371 478 LINE"
 );
 }
 );
-width = 600;
+width = 590;
 }
 );
 unicode = 05DA;
 },
 {
 glyphname = "kaf-hb";
-lastChange = "2019-10-03 10:02:33 +0000";
+lastChange = "2019-10-03 19:35:26 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {557, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/kaf-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -253}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
+"167 568 LINE",
+"126 500 LINE",
+"145 420 LINE",
+"186 488 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"254 410 LINE SMOOTH",
+"374 410 OFFCURVE",
+"408 386 OFFCURVE",
+"408 248 CURVE SMOOTH",
+"408 179 OFFCURVE",
+"408 101 OFFCURVE",
+"371 14 CURVE",
+"447 90 LINE",
+"484 176 OFFCURVE",
+"484 253 OFFCURVE",
+"484 321 CURVE SMOOTH",
+"484 452 OFFCURVE",
+"423 500 OFFCURVE",
+"302 500 CURVE SMOOTH",
+"126 500 LINE",
+"73 410 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"395 0 LINE",
+"447 90 LINE",
+"107 90 LINE",
+"55 0 LINE"
 );
 }
 );
-width = 600;
+width = 555;
 }
 );
 unicode = 05DB;
 },
 {
 glyphname = "lamed-hb";
-lastChange = "2019-10-03 10:02:20 +0000";
+lastChange = "2019-10-03 19:42:20 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {600, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/lamed-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -235}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"70 634 OFFCURVE",
+"75 597 OFFCURVE",
+"75 559 CURVE SMOOTH",
+"75 463 LINE SMOOTH",
+"75 425 OFFCURVE",
+"99 410 OFFCURVE",
+"137 410 CURVE SMOOTH",
+"315 410 LINE SMOOTH",
+"363 410 OFFCURVE",
+"385 400 OFFCURVE",
+"385 342 CURVE SMOOTH",
+"385 280 OFFCURVE",
+"383 238 OFFCURVE",
+"366 180 CURVE",
+"452 278 LINE",
+"467 322 OFFCURVE",
+"469 364 OFFCURVE",
+"469 410 CURVE SMOOTH",
+"469 470 OFFCURVE",
+"438 500 OFFCURVE",
+"367 500 CURVE SMOOTH",
+"179 500 LINE SMOOTH",
+"157 500 OFFCURVE",
+"151 510 OFFCURVE",
+"151 538 CURVE SMOOTH",
+"151 649 LINE SMOOTH",
+"151 689 OFFCURVE",
+"150 724 OFFCURVE",
+"119 762 CURVE",
+"51 670 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"215 12 OFFCURVE",
+"317 58 OFFCURVE",
+"411 191 CURVE",
+"452 278 LINE",
+"367 184 OFFCURVE",
+"278 123 OFFCURVE",
+"152 90 CURVE",
+"115 -9 LINE"
 );
 }
 );
@@ -783,812 +755,419 @@ unicode = 05DC;
 },
 {
 glyphname = "finalmem-hb";
-lastChange = "2019-10-03 10:02:34 +0000";
+lastChange = "2019-10-03 19:39:19 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {633, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/finalmem-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -251}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
+"545 90 LINE",
+"572 184 OFFCURVE",
+"572 270 OFFCURVE",
+"572 353 CURVE SMOOTH",
+"572 454 OFFCURVE",
+"531 500 OFFCURVE",
+"420 500 CURVE SMOOTH",
+"126 500 LINE",
+"73 410 LINE",
+"372 410 LINE SMOOTH",
+"482 410 OFFCURVE",
+"496 386 OFFCURVE",
+"496 278 CURVE SMOOTH",
+"496 195 OFFCURVE",
+"496 109 OFFCURVE",
+"469 15 CURVE"
 );
 },
 {
 closed = 1;
 nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"115 74 LINE SMOOTH",
+"115 18 OFFCURVE",
+"139 0 OFFCURVE",
+"187 0 CURVE SMOOTH",
+"493 0 LINE",
+"545 90 LINE",
+"229 90 LINE SMOOTH",
+"197 90 OFFCURVE",
+"191 103 OFFCURVE",
+"191 149 CURVE SMOOTH",
+"191 500 LINE",
+"115 410 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"186 488 LINE",
+"167 568 LINE",
+"126 500 LINE",
+"145 420 LINE"
 );
 }
 );
-width = 600;
+width = 634;
 }
 );
 unicode = 05DD;
 },
 {
 glyphname = "mem-hb";
-lastChange = "2019-10-03 10:02:21 +0000";
+lastChange = "2019-10-03 19:05:32 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {756, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/mem-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -230}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
-);
-}
-);
-width = 600;
+width = 730;
 }
 );
 unicode = 05DE;
 },
 {
 glyphname = "finalnun-hb";
-lastChange = "2019-10-03 10:02:35 +0000";
+lastChange = "2019-10-03 19:42:49 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {332, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/finalnun-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -265}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"93 422 LINE SMOOTH",
+"147 379 OFFCURVE",
+"161 354 OFFCURVE",
+"161 258 CURVE SMOOTH",
+"161 -246 LINE",
+"237 -170 LINE",
+"237 310 LINE SMOOTH",
+"237 422 OFFCURVE",
+"209 461 OFFCURVE",
+"161 503 CURVE SMOOTH",
+"105 552 LINE",
+"52 461 LINE"
 );
 }
 );
-width = 600;
+width = 335;
 }
 );
 unicode = 05DF;
 },
 {
 glyphname = "nun-hb";
-lastChange = "2019-10-03 10:02:22 +0000";
+lastChange = "2019-10-03 19:44:39 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {338, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/nun-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -263}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"165 398 LINE SMOOTH",
+"207 361 OFFCURVE",
+"225 346 OFFCURVE",
+"225 247 CURVE SMOOTH",
+"225 189 OFFCURVE",
+"234 117 OFFCURVE",
+"214 19 CURVE",
+"275 90 LINE",
+"295 142 OFFCURVE",
+"290 222 OFFCURVE",
+"290 302 CURVE SMOOTH",
+"290 410 OFFCURVE",
+"277 442 OFFCURVE",
+"227 483 CURVE SMOOTH",
+"145 552 LINE",
+"92 461 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"223 0 LINE",
+"275 90 LINE",
+"97 90 LINE",
+"45 0 LINE"
 );
 }
 );
-width = 600;
+width = 340;
 }
 );
 unicode = 05E0;
 },
 {
 glyphname = "samekh-hb";
-lastChange = "2019-10-03 10:02:35 +0000";
+lastChange = "2019-10-03 19:48:23 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {645, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/samekh-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -244}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
+"439 410 LINE SMOOTH",
+"487 410 OFFCURVE",
+"514 403 OFFCURVE",
+"514 344 CURVE SMOOTH",
+"514 282 OFFCURVE",
+"510 225 OFFCURVE",
+"479 129 CURVE",
+"571 255 LINE",
+"589 291 OFFCURVE",
+"598 354 OFFCURVE",
+"598 413 CURVE SMOOTH",
+"598 473 OFFCURVE",
+"562 500 OFFCURVE",
+"487 500 CURVE SMOOTH",
+"123 500 LINE",
+"70 410 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"164 568 LINE",
+"123 500 LINE",
+"142 420 LINE",
+"183 488 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"181 98 LINE SMOOTH",
+"198 9 OFFCURVE",
+"222 -15 OFFCURVE",
+"265 -15 CURVE SMOOTH",
+"361 -15 OFFCURVE",
+"463 39 OFFCURVE",
+"535 169 CURVE",
+"571 255 LINE",
+"480 146 OFFCURVE",
+"394 89 OFFCURVE",
+"300 89 CURVE SMOOTH",
+"261 89 OFFCURVE",
+"250 105 OFFCURVE",
+"241 158 CURVE SMOOTH",
+"186 478 LINE",
+"120 412 LINE"
 );
 }
 );
-width = 600;
+width = 646;
 }
 );
 unicode = 05E1;
 },
 {
 glyphname = "ayin-hb";
-lastChange = "2019-10-03 10:02:22 +0000";
+lastChange = "2019-10-03 19:05:38 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {648, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/ayin-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -250}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
-);
-}
-);
-width = 600;
+width = 650;
 }
 );
 unicode = 05E2;
 },
 {
 glyphname = "finalpe-hb";
-lastChange = "2019-10-03 10:02:36 +0000";
+lastChange = "2019-10-03 19:05:37 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {628, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/finalpe-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -233}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
-);
-}
-);
-width = 600;
+width = 625;
 }
 );
 unicode = 05E3;
 },
 {
 glyphname = "pe-hb";
-lastChange = "2019-10-03 10:02:23 +0000";
+lastChange = "2019-10-03 19:05:39 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {701, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/pe-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -230}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
-);
-}
-);
-width = 600;
+width = 700;
 }
 );
 unicode = 05E4;
 },
 {
 glyphname = "finaltsadi-hb";
-lastChange = "2019-10-03 10:02:36 +0000";
+lastChange = "2019-10-03 19:05:40 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {566, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/finaltsadi-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -242}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
-);
-}
-);
-width = 600;
+width = 565;
 }
 );
 unicode = 05E5;
 },
 {
 glyphname = "tsadi-hb";
-lastChange = "2019-10-03 10:02:24 +0000";
+lastChange = "2019-10-03 19:05:42 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {625, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/tsadi-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -240}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
-);
-}
-);
-width = 600;
+width = 628;
 }
 );
 unicode = 05E6;
 },
 {
 glyphname = "qof-hb";
-lastChange = "2019-10-03 10:02:37 +0000";
+lastChange = "2019-10-03 19:05:43 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {657, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/qof-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -234}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
-);
-}
-);
-width = 600;
+width = 660;
 }
 );
 unicode = 05E7;
 },
 {
 glyphname = "resh-hb";
-lastChange = "2019-10-03 10:02:25 +0000";
+lastChange = "2019-10-03 19:45:13 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {495, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/resh-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -267}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
 {
 closed = 1;
 nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
+"137 568 LINE",
+"96 500 LINE",
+"115 420 LINE",
+"156 488 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
+"271 410 LINE SMOOTH",
+"354 410 OFFCURVE",
+"365 390 OFFCURVE",
+"365 298 CURVE SMOOTH",
+"365 -38 LINE",
+"441 38 LINE",
+"441 373 LINE SMOOTH",
+"441 460 OFFCURVE",
+"408 500 OFFCURVE",
+"319 500 CURVE SMOOTH",
+"96 500 LINE",
+"43 410 LINE"
 );
 }
 );
-width = 600;
+width = 510;
 }
 );
 unicode = 05E8;
 },
 {
 glyphname = "shin-hb";
-lastChange = "2019-10-03 10:02:38 +0000";
+lastChange = "2019-10-03 19:05:46 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {744, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/shin-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -232}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
-);
-}
-);
-width = 600;
+width = 745;
 }
 );
 unicode = 05E9;
 },
 {
 glyphname = "tav-hb";
-lastChange = "2019-10-03 10:02:26 +0000";
+lastChange = "2019-10-03 19:05:56 +0000";
 layers = (
 {
+backgroundImage = {
+crop = "{{0, 0}, {688, 1000}}";
+imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/tav-hb.jpg";
+locked = "1";
+transform = "{1, 0, 0, 1, 0, -258}";
+};
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
-paths = (
-{
-closed = 1;
-nodes = (
-"224 287 OFFCURVE",
-"354 144 OFFCURVE",
-"469 -20 CURVE",
-"531 89 LINE",
-"416 253 OFFCURVE",
-"286 396 OFFCURVE",
-"139 520 CURVE",
-"77 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"446 389 OFFCURVE",
-"469 347 OFFCURVE",
-"469 293 CURVE",
-"469 254 OFFCURVE",
-"432 172 OFFCURVE",
-"388 117 CURVE",
-"468 214 LINE",
-"512 269 OFFCURVE",
-"550 350 OFFCURVE",
-"550 389 CURVE",
-"550 443 OFFCURVE",
-"508 498 OFFCURVE",
-"428 520 CURVE",
-"366 411 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"95 297 OFFCURVE",
-"77 212 OFFCURVE",
-"77 166 CURVE SMOOTH",
-"77 118 OFFCURVE",
-"90 67 OFFCURVE",
-"129 0 CURVE",
-"191 109 LINE",
-"152 166 OFFCURVE",
-"149 221 OFFCURVE",
-"149 269 CURVE SMOOTH",
-"149 315 OFFCURVE",
-"174 393 OFFCURVE",
-"196 430 CURVE",
-"117 334 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"90 0 OFFCURVE",
-"148 0 OFFCURVE",
-"206 0 CURVE",
-"268 109 LINE",
-"210 109 OFFCURVE",
-"152 109 OFFCURVE",
-"94 109 CURVE",
-"32 0 LINE"
-);
-}
-);
-width = 600;
+width = 690;
 }
 );
 unicode = 05EA;
