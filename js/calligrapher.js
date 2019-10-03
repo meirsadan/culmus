@@ -246,6 +246,7 @@ function animate( time ) {
 window.onload = function() {
 
     var canvasEl = document.getElementById( 'calligrapherCanvas' );
+    var letterLabelEl = document.getElementById( 'letterLabel' );
     var previousButtonEl = document.getElementById( 'previousButton' );
     var nextButtonEl = document.getElementById( 'nextButton' );
 
@@ -266,6 +267,10 @@ window.onload = function() {
         var down = false;
         var t_o;
 
+        var getDuration = () => {
+            return f.letters[ f.currentLetter ].length * ( 1000 / window.innerHeight ) * 2;
+        };
+
         var ondown = () => {
             clearTimeout( t_o );
             down = true;
@@ -273,8 +278,8 @@ window.onload = function() {
         var onup = () => {
             clearTimeout( t_o );
             down = false;
+            tween.to( { offset: 1 }, getDuration() * ( 1 - phase.offset ) );
             t_o = setTimeout( () => tween.start(), 500 );
-
         };
         var redrawPhase = () => {
             paper.project.layers.letter.removeChildren();
@@ -285,11 +290,13 @@ window.onload = function() {
         // console.log( f.letters[ 0 ].length * 10 );
 
         var tween = new TWEEN.Tween( phase )
-            .to( { offset: 1 }, f.letters[ 0 ].length * 10 )
+            .to( { offset: 1 }, getDuration() )
             .onUpdate( () => {
                 redrawPhase( phase.offset );
             } )
             .start();
+            
+        letterLabelEl.innerText = f.letterList[ f.currentLetter ];
 
         requestAnimationFrame( animate );
 
@@ -314,14 +321,16 @@ window.onload = function() {
             e.preventDefault();
             f.previousLetter();
             phase.offset = 0;
-            tween.start();
+            tween.to( { offset: 1 }, getDuration() ).start();
+            letterLabelEl.innerText = f.letterList[ f.currentLetter ];
         } );
 
         nextButtonEl.addEventListener( 'click', e => {
             e.preventDefault();
             f.nextLetter();
             phase.offset = 0;
-            tween.start();
+            tween.to( { offset: 1 }, getDuration() ).start();
+            letterLabelEl.innerText = f.letterList[ f.currentLetter ];
         } );
 
     } );
