@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "CalligrapherFont";
+    font-weight: bold;
+    src: url("../fonts/CalligrapherFont-Regular.otf") format("opentype");
+}
+
 html, body {
     margin: 0;
     overflow: hidden;
@@ -8,20 +14,27 @@ html, body {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
+    cursor: grab;
+}
+
+#calligrapherCanvas:active {
+    cursor: grabbing;
 }
 
 .button {
     position: absolute;
-    top: 50vh;
+    top: 50%;
     width: 40px; height: 20px;
     margin-top: -10px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #ff0000;
+    transition: padding 150ms;
 }
 
 .button#previousButton {
     right: 5px;
+    padding: 0 5px 0 0;
 }
 
 .button#previousButton:before {
@@ -30,8 +43,42 @@ html, body {
 
 .button#nextButton {
     left: 5px;
+    padding: 0 0 0 5px;
 }
 
 .button#nextButton:before {
     content: "←";
+}
+
+.button#reverseButton {
+    top: auto; bottom: 15px;
+    left: 5px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button#reverseButton:before {
+    content: "R";
+}
+
+.button#reverseButton.reversed:before {
+    content: "L";
+}
+
+.button:hover {
+    padding: 0 !important;
+}
+
+
+.letter-label {
+    position: absolute;
+    bottom: 8vh;
+    left: 0; right: 0;
+    font-family: "CalligrapherFont", "Courier New", monospace;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #aaddff;
+    pointer-events: none;
 }

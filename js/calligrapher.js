@@ -16,6 +16,7 @@ class Stroke {
     constructor( path ) {
         this.path = path;
         this.path.set( pathStyle );
+        this.reverse = false;
         this.calculatePaths();
         // window.addEventListener( 'resize', () => this.calculatePaths() );
     }
@@ -26,17 +27,23 @@ class Stroke {
     }
     getPhase( phaseLength ) {
         this.calculatePaths();
-        var incoming = new paper.Path( this.incoming.segments );
-        var outgoing = new paper.Path( this.outgoing.segments );
+        var incoming = new paper.Path( this.reverse ? this.outgoing.segments : this.incoming.segments );
+        var outgoing = new paper.Path( this.reverse ? this.incoming.segments : this.outgoing.segments );
 
-        var outgoingPhaseLength = ( ( this.length - phaseLength ) / this.length ) * outgoing.length;
+        var outgoingPhaseLength = ( ( this.length - phaseLength ) / this.length ) * this.outgoing.length;
 
-        console.log( phaseLength, outgoingPhaseLength );
+        // console.log( phaseLength, outgoingPhaseLength );
 
-        incoming.splitAt( phaseLength );
+        incoming.splitAt( this.reverse ? ( this.outgoing.length - outgoingPhaseLength ) : phaseLength );
         incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
 
-        outgoing = outgoing.splitAt( outgoingPhaseLength );
+        outgoing = outgoing.splitAt( this.reverse ? ( this.incoming.length - phaseLength ) : outgoingPhaseLength );
+        if ( outgoing.segments.length > incoming.segments.length ) {
+            outgoing.removeSegments( 0, 1 );
+        } else if ( incoming.segments.length > outgoing.segments.length ) {
+            incoming.removeSegments( incoming.segments.length - 1 );
+            incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
+        }
         outgoing.segments[ 0 ].handleIn.set( 0, 0 );
         
         incoming.addSegments( outgoing.segments );
@@ -52,15 +59,23 @@ class Stroke {
         var phase = this.getPhase( phaseLength );
         var phaseMiddle = Math.floor( phase.segments.length / 2 );
         var pen = new paper.Path( [ phase.segments[ phaseMiddle - 1 ], phase.segments[ phaseMiddle ] ] );
+        var angle = Math.round( 120 + pen.segments[1].point.subtract( pen.segments[0].point ).angle );
+        var angleLabel = new paper.PointText( {
+            point: pen.bounds.center.clone().add( 10, 0 ),
+            content: angle + '°',
+            fillColor: 'red',
+            fontFamily: 'Courier New',
+            fontWeight: 'bold',
+            fontSize: 8,
+            opacity: 0.7
+        } );
         var g = new paper.Group();
 
         pen.set( penStyle );
 
-        var angle = pen.segments[1].point.subtract( pen.segments[0].point ).angle;
-        // console.log( angle );
-
         g.addChild( phase );
         g.addChild( pen );
+        g.addChild( angleLabel );
 
         return g;
     }
@@ -71,6 +86,7 @@ class Letter {
         this.strokes = [];
         this.strokeLengths = [];
         this.length = 0;
+        this.reverse = false;
         this.g = new paper.Item().importSVG( '<svg>' + font.getPath( char, 0, 750, 1000 ).toSVG() + '</svg>' );
         this.g = this.g;
         if ( this.g.firstChild.className == 'Path' ) {
@@ -84,6 +100,12 @@ class Letter {
             this.strokes.push( s );
             this.strokeLengths.push( s.length );
             this.length += s.length;
+        } );
+    }
+    reversePaths() {
+        this.reverse = !this.reverse;
+        this.strokes.forEach( s => {
+            s.reverse = this.reverse;
         } );
     }
     calculateLength() {
@@ -169,6 +191,10 @@ class Font {
         // console.log( this.scaleFactor );
     }
 
+    reversePaths() {
+        this.letters.forEach( l => l.reversePaths() );
+    }
+
     nextLetter() {
         this.currentLetter += 1;
         if ( this.currentLetter == this.letterList.length ) {
@@ -213,16 +239,16 @@ function createBackground() {
         length: window.innerHeight * 0.58
     } );
     var anglepoint = new paper.Point( {
-        x: -100,
+        x: -(window.innerWidth / 50 * 20),
         y: window.innerHeight * 0.75
     } );
-    for ( var i = 0; i < ( window.innerWidth + 100 ) / 20; i++ ) {
+    for ( var i = 0; i < 80; i++ ) {
         bg.addChild( new paper.Path.Line( {
             from: anglepoint.clone(),
             to: anglepoint.clone().add( anglevector ),
             strokeColor: '#aaddff'
         } ) );
-        anglepoint.x += 20;
+        anglepoint.x += window.innerWidth / 50;
     }
     bg.addChild( baseline );
     bg.addChild( midline );
@@ -238,8 +264,10 @@ function animate( time ) {
 window.onload = function() {
 
     var canvasEl = document.getElementById( 'calligrapherCanvas' );
+    var letterLabelEl = document.getElementById( 'letterLabel' );
     var previousButtonEl = document.getElementById( 'previousButton' );
     var nextButtonEl = document.getElementById( 'nextButton' );
+    var reverseButtonEl = document.getElementById( 'reverseButton' );
 
     paper.setup( "calligrapherCanvas" );
 
@@ -258,6 +286,10 @@ window.onload = function() {
         var down = false;
         var t_o;
 
+        var getDuration = () => {
+            return f.letters[ f.currentLetter ].length * ( 1000 / window.innerHeight ) * 2;
+        };
+
         var ondown = () => {
             clearTimeout( t_o );
             down = true;
@@ -265,8 +297,8 @@ window.onload = function() {
         var onup = () => {
             clearTimeout( t_o );
             down = false;
+            tween.to( { offset: 1 }, getDuration() * ( 1 - phase.offset ) );
             t_o = setTimeout( () => tween.start(), 500 );
-
         };
         var redrawPhase = () => {
             paper.project.layers.letter.removeChildren();
@@ -277,11 +309,13 @@ window.onload = function() {
         // console.log( f.letters[ 0 ].length * 10 );
 
         var tween = new TWEEN.Tween( phase )
-            .to( { offset: 1 }, f.letters[ 0 ].length * 10 )
+            .to( { offset: 1 }, getDuration() )
             .onUpdate( () => {
                 redrawPhase( phase.offset );
             } )
             .start();
+            
+        letterLabelEl.innerText = f.letterList[ f.currentLetter ];
 
         requestAnimationFrame( animate );
 
@@ -306,14 +340,24 @@ window.onload = function() {
             e.preventDefault();
             f.previousLetter();
             phase.offset = 0;
-            tween.start();
+            tween.to( { offset: 1 }, getDuration() ).start();
+            letterLabelEl.innerText = f.letterList[ f.currentLetter ];
         } );
 
         nextButtonEl.addEventListener( 'click', e => {
             e.preventDefault();
             f.nextLetter();
             phase.offset = 0;
-            tween.start();
+            tween.to( { offset: 1 }, getDuration() ).start();
+            letterLabelEl.innerText = f.letterList[ f.currentLetter ];
+        } );
+
+        reverseButtonEl.addEventListener( 'click', e => {
+            e.preventDefault();
+            f.reversePaths();
+            e.currentTarget.className = e.currentTarget.className == 'button reversed' ? 'button' : 'button reversed';
+            phase.offset = 0;
+            tween.to( { offset: 1 }, getDuration() ).start();
         } );
 
     } );
