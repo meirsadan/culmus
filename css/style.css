@@ -10,6 +10,28 @@ html, body {
     width: 100vw; height: 100vh;
 }
 
-#svgs {
-    display: none;
+.button {
+    position: absolute;
+    top: 50vh;
+    width: 40px; height: 20px;
+    margin-top: -10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.button#previousButton {
+    right: 5px;
+}
+
+.button#previousButton:before {
+    content: "→";
+}
+
+.button#nextButton {
+    left: 5px;
+}
+
+.button#nextButton:before {
+    content: "←";
 }
