@@ -1,5 +1,8 @@
 {
 .appVersion = "1230";
+DisplayStrings = (
+"/yod-hb"
+);
 date = "2019-07-18 22:28:03 +0000";
 familyName = CalligrapherFont;
 fontMaster = (
@@ -555,7 +558,7 @@ unicode = 05D8;
 },
 {
 glyphname = "yod-hb";
-lastChange = "2019-10-03 10:02:33 +0000";
+lastChange = "2019-10-03 11:00:21 +0000";
 layers = (
 {
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
@@ -563,27 +566,20 @@ paths = (
 {
 closed = 1;
 nodes = (
-"316 391 LINE",
-"367 391 OFFCURVE",
-"391 357 OFFCURVE",
-"391 294 CURVE",
-"391 78 LINE",
-"453 187 LINE",
-"453 403 LINE",
-"453 454 OFFCURVE",
-"419 498 OFFCURVE",
-"378 500 CURVE",
-"118 500 LINE",
-"56 391 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"443 0 LINE",
-"505 109 LINE",
-"85 109 LINE",
-"23 0 LINE"
+"267 370 OFFCURVE",
+"283 352 OFFCURVE",
+"283 316 CURVE",
+"283 261 OFFCURVE",
+"247 180 OFFCURVE",
+"218 116 CURVE",
+"310 185 LINE",
+"354 254 OFFCURVE",
+"381 329 OFFCURVE",
+"381 384 CURVE",
+"381 446 OFFCURVE",
+"340 476 OFFCURVE",
+"259 521 CURVE",
+"196 411 LINE"
 );
 }
 );
