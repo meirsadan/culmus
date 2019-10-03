@@ -50,6 +50,22 @@ html, body {
     content: "←";
 }
 
+.button#reverseButton {
+    top: auto; bottom: 15px;
+    left: 5px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button#reverseButton:before {
+    content: "R";
+}
+
+.button#reverseButton.reversed:before {
+    content: "L";
+}
+
 .button:hover {
     padding: 0 !important;
 }

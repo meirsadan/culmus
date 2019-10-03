@@ -16,6 +16,7 @@ class Stroke {
     constructor( path ) {
         this.path = path;
         this.path.set( pathStyle );
+        this.reverse = false;
         this.calculatePaths();
         // window.addEventListener( 'resize', () => this.calculatePaths() );
     }
@@ -26,17 +27,17 @@ class Stroke {
     }
     getPhase( phaseLength ) {
         this.calculatePaths();
-        var incoming = new paper.Path( this.incoming.segments );
-        var outgoing = new paper.Path( this.outgoing.segments );
+        var incoming = new paper.Path( this.reverse ? this.outgoing.segments : this.incoming.segments );
+        var outgoing = new paper.Path( this.reverse ? this.incoming.segments : this.outgoing.segments );
 
-        var outgoingPhaseLength = ( ( this.length - phaseLength ) / this.length ) * outgoing.length;
+        var outgoingPhaseLength = ( ( this.length - phaseLength ) / this.length ) * this.outgoing.length;
 
         // console.log( phaseLength, outgoingPhaseLength );
 
-        incoming.splitAt( phaseLength );
+        incoming.splitAt( this.reverse ? ( this.outgoing.length - outgoingPhaseLength ) : phaseLength );
         incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
 
-        outgoing = outgoing.splitAt( outgoingPhaseLength );
+        outgoing = outgoing.splitAt( this.reverse ? ( this.incoming.length - phaseLength ) : outgoingPhaseLength );
         if ( outgoing.segments.length > incoming.segments.length ) {
             outgoing.removeSegments( 0, 1 );
         } else if ( incoming.segments.length > outgoing.segments.length ) {
@@ -85,6 +86,7 @@ class Letter {
         this.strokes = [];
         this.strokeLengths = [];
         this.length = 0;
+        this.reverse = false;
         this.g = new paper.Item().importSVG( '<svg>' + font.getPath( char, 0, 750, 1000 ).toSVG() + '</svg>' );
         this.g = this.g;
         if ( this.g.firstChild.className == 'Path' ) {
@@ -98,6 +100,12 @@ class Letter {
             this.strokes.push( s );
             this.strokeLengths.push( s.length );
             this.length += s.length;
+        } );
+    }
+    reversePaths() {
+        this.reverse = !this.reverse;
+        this.strokes.forEach( s => {
+            s.reverse = this.reverse;
         } );
     }
     calculateLength() {
@@ -183,6 +191,10 @@ class Font {
         // console.log( this.scaleFactor );
     }
 
+    reversePaths() {
+        this.letters.forEach( l => l.reversePaths() );
+    }
+
     nextLetter() {
         this.currentLetter += 1;
         if ( this.currentLetter == this.letterList.length ) {
@@ -255,6 +267,7 @@ window.onload = function() {
     var letterLabelEl = document.getElementById( 'letterLabel' );
     var previousButtonEl = document.getElementById( 'previousButton' );
     var nextButtonEl = document.getElementById( 'nextButton' );
+    var reverseButtonEl = document.getElementById( 'reverseButton' );
 
     paper.setup( "calligrapherCanvas" );
 
@@ -337,6 +350,14 @@ window.onload = function() {
             phase.offset = 0;
             tween.to( { offset: 1 }, getDuration() ).start();
             letterLabelEl.innerText = f.letterList[ f.currentLetter ];
+        } );
+
+        reverseButtonEl.addEventListener( 'click', e => {
+            e.preventDefault();
+            f.reversePaths();
+            e.currentTarget.className = e.currentTarget.className == 'button reversed' ? 'button' : 'button reversed';
+            phase.offset = 0;
+            tween.to( { offset: 1 }, getDuration() ).start();
         } );
 
     } );
