@@ -37,6 +37,12 @@ class Stroke {
         incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
 
         outgoing = outgoing.splitAt( outgoingPhaseLength );
+        if ( outgoing.segments.length > incoming.segments.length ) {
+            outgoing.removeSegments( 0, 1 );
+        } else if ( incoming.segments.length > outgoing.segments.length ) {
+            incoming.removeSegments( incoming.segments.length - 1 );
+            incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
+        }
         outgoing.segments[ 0 ].handleIn.set( 0, 0 );
         
         incoming.addSegments( outgoing.segments );
