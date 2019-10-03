@@ -355,7 +355,7 @@ unicode = 05D5;
 },
 {
 glyphname = "zayin-hb";
-lastChange = "2019-10-03 19:25:50 +0000";
+lastChange = "2019-10-03 19:58:24 +0000";
 layers = (
 {
 backgroundImage = {
@@ -395,16 +395,16 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"211 243 LINE SMOOTH",
-"197 284 OFFCURVE",
-"172 326 OFFCURVE",
-"206 419 CURVE",
-"151 324 LINE",
 "120 266 OFFCURVE",
 "130 222 OFFCURVE",
 "156 148 CURVE SMOOTH",
 "220 -37 LINE",
-"275 58 LINE"
+"275 58 LINE",
+"211 243 LINE SMOOTH",
+"197 284 OFFCURVE",
+"172 326 OFFCURVE",
+"206 419 CURVE",
+"151 324 LINE"
 );
 }
 );
@@ -755,7 +755,7 @@ unicode = 05DC;
 },
 {
 glyphname = "finalmem-hb";
-lastChange = "2019-10-03 19:39:19 +0000";
+lastChange = "2019-10-03 19:58:46 +0000";
 layers = (
 {
 backgroundImage = {
@@ -769,6 +769,22 @@ paths = (
 {
 closed = 1;
 nodes = (
+"167 568 LINE",
+"126 500 LINE",
+"145 420 LINE",
+"186 488 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"372 410 LINE SMOOTH",
+"482 410 OFFCURVE",
+"496 386 OFFCURVE",
+"496 278 CURVE SMOOTH",
+"496 195 OFFCURVE",
+"496 109 OFFCURVE",
+"469 15 CURVE",
 "545 90 LINE",
 "572 184 OFFCURVE",
 "572 270 OFFCURVE",
@@ -777,14 +793,7 @@ nodes = (
 "531 500 OFFCURVE",
 "420 500 CURVE SMOOTH",
 "126 500 LINE",
-"73 410 LINE",
-"372 410 LINE SMOOTH",
-"482 410 OFFCURVE",
-"496 386 OFFCURVE",
-"496 278 CURVE SMOOTH",
-"496 195 OFFCURVE",
-"496 109 OFFCURVE",
-"469 15 CURVE"
+"73 410 LINE"
 );
 },
 {
@@ -802,15 +811,6 @@ nodes = (
 "191 149 CURVE SMOOTH",
 "191 500 LINE",
 "115 410 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"186 488 LINE",
-"167 568 LINE",
-"126 500 LINE",
-"145 420 LINE"
 );
 }
 );
@@ -923,7 +923,7 @@ unicode = 05E0;
 },
 {
 glyphname = "samekh-hb";
-lastChange = "2019-10-03 19:48:23 +0000";
+lastChange = "2019-10-03 19:58:56 +0000";
 layers = (
 {
 backgroundImage = {
@@ -934,6 +934,15 @@ transform = "{1, 0, 0, 1, 0, -244}";
 };
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
+{
+closed = 1;
+nodes = (
+"164 568 LINE",
+"123 500 LINE",
+"142 420 LINE",
+"183 488 LINE"
+);
+},
 {
 closed = 1;
 nodes = (
@@ -953,15 +962,6 @@ nodes = (
 "487 500 CURVE SMOOTH",
 "123 500 LINE",
 "70 410 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"164 568 LINE",
-"123 500 LINE",
-"142 420 LINE",
-"183 488 LINE"
 );
 },
 {
