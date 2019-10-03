@@ -686,7 +686,7 @@ unicode = 05DB;
 },
 {
 glyphname = "lamed-hb";
-lastChange = "2019-10-03 20:57:24 +0000";
+lastChange = "2019-10-03 21:13:46 +0000";
 layers = (
 {
 backgroundImage = {
@@ -700,9 +700,9 @@ paths = (
 {
 closed = 1;
 nodes = (
-"70 634 OFFCURVE",
-"75 597 OFFCURVE",
-"75 559 CURVE SMOOTH",
+"70 622 OFFCURVE",
+"75 585 OFFCURVE",
+"75 547 CURVE SMOOTH",
 "75 463 LINE SMOOTH",
 "75 425 OFFCURVE",
 "99 410 OFFCURVE",
@@ -725,11 +725,11 @@ nodes = (
 "157 500 OFFCURVE",
 "151 510 OFFCURVE",
 "151 538 CURVE SMOOTH",
-"151 649 LINE SMOOTH",
-"151 689 OFFCURVE",
-"150 724 OFFCURVE",
-"119 762 CURVE",
-"51 670 LINE"
+"151 637 LINE SMOOTH",
+"151 677 OFFCURVE",
+"150 712 OFFCURVE",
+"119 750 CURVE",
+"51 658 LINE"
 );
 },
 {
