@@ -29,14 +29,14 @@ class Stroke {
         var incoming = new paper.Path( this.incoming.segments );
         var outgoing = new paper.Path( this.outgoing.segments );
 
-        var outgoingPhaseLength = ( phaseLength / incoming.length ) * outgoing.length;
+        var outgoingPhaseLength = ( ( this.length - phaseLength ) / this.length ) * outgoing.length;
 
         console.log( phaseLength, outgoingPhaseLength );
 
         incoming.splitAt( phaseLength );
         incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
 
-        outgoing = outgoing.splitAt( this.length - outgoingPhaseLength );
+        outgoing = outgoing.splitAt( outgoingPhaseLength );
         outgoing.segments[ 0 ].handleIn.set( 0, 0 );
         
         incoming.addSegments( outgoing.segments );
