@@ -151,7 +151,7 @@ class Font {
     
     constructor( options ) {
         this.src = "fonts/CalligrapherFont-Regular.otf";
-        this.letterList = [ 'א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'י', 'ך', 'כ', 'ל', 'ם', 'מ', 'ן', 'נ', 'ס', 'ע', 'ף', 'פ', 'ץ', 'צ', 'ק', 'ר', 'ש', 'ת' ];
+        this.letterList = [ 'א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'י', 'כ', 'ך', 'ל', 'מ', 'ם', 'נ', 'ן', 'ס', 'ע', 'פ', 'ף', 'צ', 'ץ', 'ק', 'ר', 'ש', 'ת' ];
         this.letters = [];
         this.currentLetter = 0;
         this.scaleFactor = 1;
