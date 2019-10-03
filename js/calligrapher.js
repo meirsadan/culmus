@@ -29,10 +29,14 @@ class Stroke {
         var incoming = new paper.Path( this.incoming.segments );
         var outgoing = new paper.Path( this.outgoing.segments );
 
+        var outgoingPhaseLength = ( phaseLength / incoming.length ) * outgoing.length;
+
+        console.log( phaseLength, outgoingPhaseLength );
+
         incoming.splitAt( phaseLength );
         incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
 
-        outgoing = outgoing.splitAt( this.length - phaseLength );
+        outgoing = outgoing.splitAt( this.length - outgoingPhaseLength );
         outgoing.segments[ 0 ].handleIn.set( 0, 0 );
         
         incoming.addSegments( outgoing.segments );
@@ -69,6 +73,12 @@ class Letter {
         this.length = 0;
         this.g = new paper.Item().importSVG( '<svg>' + font.getPath( char, 0, 750, 1000 ).toSVG() + '</svg>' );
         this.g = this.g;
+        if ( this.g.firstChild.className == 'Path' ) {
+            var paths = this.g.removeChildren();
+            this.g.addChild( new paper.CompoundPath( {
+                children: paths
+            } ) );
+        }
         this.g.firstChild.children.forEach( path => {
             var s = new Stroke( path );
             this.strokes.push( s );
@@ -242,7 +252,7 @@ window.onload = function() {
 
     var f = new Font().load( () => {
 
-        console.log( f.g );
+        // console.log( f.g );
 
         var phase = { offset: 0 };
         var down = false;
