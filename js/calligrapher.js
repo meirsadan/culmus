@@ -221,16 +221,16 @@ function createBackground() {
         length: window.innerHeight * 0.58
     } );
     var anglepoint = new paper.Point( {
-        x: -100,
+        x: -(window.innerWidth / 50 * 20),
         y: window.innerHeight * 0.75
     } );
-    for ( var i = 0; i < ( window.innerWidth + 100 ) / 20; i++ ) {
+    for ( var i = 0; i < 80; i++ ) {
         bg.addChild( new paper.Path.Line( {
             from: anglepoint.clone(),
             to: anglepoint.clone().add( anglevector ),
             strokeColor: '#aaddff'
         } ) );
-        anglepoint.x += 20;
+        anglepoint.x += window.innerWidth / 50;
     }
     bg.addChild( baseline );
     bg.addChild( midline );
