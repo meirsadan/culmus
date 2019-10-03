@@ -102,6 +102,9 @@ class Letter {
             this.length += s.length;
         } );
     }
+    centerLetter() {
+        this.g.position.x = window.innerWidth / 2;
+    }
     reversePaths() {
         this.reverse = !this.reverse;
         this.strokes.forEach( s => {
@@ -181,7 +184,10 @@ class Font {
     }
 
     centerLetter() {
-        this.g.position.set( window.innerWidth / 2, window.innerHeight / 2 );
+        console.log( this.g.bounds );
+        this.g.position.x = window.innerWidth / 2;
+        this.g.position.y = window.innerHeight / 2;
+        this.letters.forEach( letter => letter.centerLetter() );
         if ( window.innerHeight / 1000 == this.scaleFactor ) return;
         var newScaleFactor = window.innerHeight / 1000;
         // console.log( newScaleFactor / this.scaleFactor );
