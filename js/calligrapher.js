@@ -31,7 +31,7 @@ class Stroke {
 
         var outgoingPhaseLength = ( ( this.length - phaseLength ) / this.length ) * outgoing.length;
 
-        console.log( phaseLength, outgoingPhaseLength );
+        // console.log( phaseLength, outgoingPhaseLength );
 
         incoming.splitAt( phaseLength );
         incoming.segments[ incoming.segments.length - 1 ].handleOut.set( 0, 0 );
@@ -52,15 +52,23 @@ class Stroke {
         var phase = this.getPhase( phaseLength );
         var phaseMiddle = Math.floor( phase.segments.length / 2 );
         var pen = new paper.Path( [ phase.segments[ phaseMiddle - 1 ], phase.segments[ phaseMiddle ] ] );
+        var angle = Math.round( 120 + pen.segments[1].point.subtract( pen.segments[0].point ).angle );
+        var angleLabel = new paper.PointText( {
+            point: pen.bounds.center.clone().add( 10, 0 ),
+            content: angle + '°',
+            fillColor: 'red',
+            fontFamily: 'Courier New',
+            fontWeight: 'bold',
+            fontSize: 8,
+            opacity: 0.7
+        } );
         var g = new paper.Group();
 
         pen.set( penStyle );
 
-        var angle = pen.segments[1].point.subtract( pen.segments[0].point ).angle;
-        // console.log( angle );
-
         g.addChild( phase );
         g.addChild( pen );
+        g.addChild( angleLabel );
 
         return g;
     }
