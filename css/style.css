@@ -23,7 +23,7 @@ html, body {
 
 .button {
     position: absolute;
-    top: 50vh;
+    top: 50%;
     width: 40px; height: 20px;
     margin-top: -10px;
     text-align: center;
