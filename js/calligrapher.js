@@ -274,6 +274,8 @@ window.onload = function() {
     var previousButtonEl = document.getElementById( 'previousButton' );
     var nextButtonEl = document.getElementById( 'nextButton' );
     var reverseButtonEl = document.getElementById( 'reverseButton' );
+    var infoButtonEl = document.getElementById( 'infoButton' );
+    var infoEl = document.getElementById( 'information' );
 
     paper.setup( "calligrapherCanvas" );
 
@@ -364,6 +366,11 @@ window.onload = function() {
             e.currentTarget.className = e.currentTarget.className == 'button reversed' ? 'button' : 'button reversed';
             phase.offset = 0;
             tween.to( { offset: 1 }, getDuration() ).start();
+        } );
+
+        infoButtonEl.addEventListener( 'click', e => {
+            e.preventDefault();
+            infoEl.className = infoEl.className == 'active' ? '' : 'active';
         } );
 
     } );

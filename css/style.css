@@ -54,7 +54,7 @@ html, body {
     top: auto; bottom: 15px;
     left: 5px;
     font-family: "Courier New", monospace;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -66,10 +66,45 @@ html, body {
     content: "L";
 }
 
+.button#infoButton {
+    top: auto; bottom: 15px;
+    right: 5px;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button#infoButton:before {
+    content: "?";
+}
+
 .button:hover {
     padding: 0 !important;
 }
 
+#information {
+    position: fixed;
+    top: -500px;
+    width: 100%;
+    padding: 0 16px;
+    transition: top 250ms;
+}
+
+#information.active {
+    top: 15px;
+}
+
+#information p {
+    max-width: 480px;
+    background: rgba( 255, 255, 255, 0.8 );
+    border: 1px solid #aaddff;
+    border-radius: 16px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 16px;
+    margin: 16px auto;
+}
 
 .letter-label {
     position: absolute;
