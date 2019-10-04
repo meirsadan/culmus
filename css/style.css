@@ -87,6 +87,7 @@ html, body {
     top: -500px;
     width: 100%;
     padding: 0 16px;
+    box-sizing: border-box;
     transition: top 250ms;
 }
 
