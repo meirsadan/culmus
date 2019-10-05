@@ -332,7 +332,7 @@ window.onload = function() {
         canvasEl.addEventListener( 'mousemove', e => {
             if ( !down ) return;
             tween.stop();
-            phase.offset = ( e.clientX / window.innerWidth * 1.5 ) - 0.25;
+            phase.offset = ( ( 1 - e.clientX / window.innerWidth ) * 1.5 ) - 0.25;
             redrawPhase();
         } );
 
@@ -340,7 +340,7 @@ window.onload = function() {
         canvasEl.addEventListener( 'touchend', onup );
         canvasEl.addEventListener( 'touchmove', e => {
             tween.stop();
-            phase.offset = ( e.touches[0].clientX / window.innerWidth * 1.5 ) - 0.25;
+            phase.offset = ( ( 1 - e.touches[0].clientX / window.innerWidth ) * 1.5 ) - 0.25;
             redrawPhase();
         } );
 
