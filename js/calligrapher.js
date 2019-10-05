@@ -1,24 +1,64 @@
 
-var pathStyle = {
-    fillColor: 'black',
-    strokeColor: 'black',
-    strokeWidth: 2,
-    opacity: 0.7
+var styles = {};
+
+var positiveStyles = {
+    pathStyle: {
+        fillColor: 'black',
+        strokeColor: 'black',
+        strokeWidth: 2,
+        opacity: 0.7
+    },
+    penStyle: {
+        strokeColor: 'red',
+        strokeWidth: 5,
+        opacity: 1
+    },
+    angleLabelStyle: {
+        fillColor: 'red',
+        fontFamily: 'Courier New',
+        fontWeight: 'bold',
+        fontSize: 8,
+        opacity: 0.7
+    },
+    backgroundLineStyle: {
+        strokeColor: '#aaddff'
+    }
 };
 
-var penStyle = {
-    strokeColor: 'red',
-    strokeWidth: 5,
-    opacity: 1
+var negativeStyles = {
+    pathStyle: {
+        fillColor: 'white',
+        strokeColor: 'white',
+        strokeWidth: 2,
+        opacity: 0.7
+    },
+    penStyle: {
+        strokeColor: '#f55b5b',
+        strokeWidth: 5,
+        opacity: 1
+    },
+    angleLabelStyle: {
+        fillColor: '#f55b5b',
+        fontFamily: 'Courier New',
+        fontWeight: 'bold',
+        fontSize: 8,
+        opacity: 0.7
+    },
+    backgroundLineStyle: {
+        strokeColor: '#425070'
+    }
 };
 
 class Stroke {
     constructor( path ) {
         this.path = path;
-        this.path.set( pathStyle );
+        this.path.set( styles.pathStyle );
         this.reverse = false;
         this.calculatePaths();
         // window.addEventListener( 'resize', () => this.calculatePaths() );
+    }
+    reapplyStyles() {
+        this.path.set( styles.pathStyle );
     }
     calculatePaths() {
         this.incoming = new paper.Path( this.path.segments );
@@ -49,7 +89,7 @@ class Stroke {
         incoming.addSegments( outgoing.segments );
 
         incoming.closed = true;
-        incoming.set( pathStyle );
+        incoming.set( styles.pathStyle );
 
         // console.log( this.path, incoming, outgoing );
 
@@ -58,21 +98,19 @@ class Stroke {
     getPhaseWithPen( phaseLength ) {
         var phase = this.getPhase( phaseLength );
         var phaseMiddle = Math.floor( phase.segments.length / 2 );
-        var pen = new paper.Path( [ phase.segments[ phaseMiddle - 1 ], phase.segments[ phaseMiddle ] ] );
+        var pen = new paper.Path( Object.assign( {
+            segments: [ 
+                phase.segments[ phaseMiddle - 1 ], 
+                phase.segments[ phaseMiddle ] 
+            ] 
+        }, styles.penStyle ) );
         var angle = Math.round( 120 + pen.segments[1].point.subtract( pen.segments[0].point ).angle );
         if ( angle > 180 ) angle -= 180;
-        var angleLabel = new paper.PointText( {
+        var angleLabel = new paper.PointText( Object.assign( {
             point: pen.bounds.center.clone().add( 10, 0 ),
-            content: angle + '°',
-            fillColor: 'red',
-            fontFamily: 'Courier New',
-            fontWeight: 'bold',
-            fontSize: 8,
-            opacity: 0.7
-        } );
+            content: angle + '°'
+        }, styles.angleLabelStyle ) );
         var g = new paper.Group();
-
-        pen.set( penStyle );
 
         g.addChild( phase );
         g.addChild( pen );
@@ -102,6 +140,9 @@ class Letter {
             this.strokeLengths.push( s.length );
             this.length += s.length;
         } );
+    }
+    reapplyStyles() {
+        this.strokes.forEach( s => s.reapplyStyles() );
     }
     centerLetter() {
         this.g.position.x = window.innerWidth / 2;
@@ -184,6 +225,10 @@ class Font {
         return this;
     }
 
+    reapplyStyles() {
+        this.letters.forEach( l => l.reapplyStyles() );
+    }
+
     centerLetter() {
         // console.log( this.g.bounds );
         this.g.position.x = window.innerWidth / 2;
@@ -238,16 +283,14 @@ function createBackground() {
         bg = new paper.Layer();
         bg.name = 'background';    
     }
-    var baseline = new paper.Path.Line( {
+    var baseline = new paper.Path.Line( Object.assign( {
         from: [ 0, window.innerHeight * 0.75 ],
-        to: [ window.innerWidth, window.innerHeight * 0.75 ],
-        strokeColor: '#aaddff'
-    } );
-    var midline = new paper.Path.Line( {
+        to: [ window.innerWidth, window.innerHeight * 0.75 ]
+    }, styles.backgroundLineStyle ) );
+    var midline = new paper.Path.Line( Object.assign( {
         from: [ 0, window.innerHeight * 0.25 ],
         to: [ window.innerWidth, window.innerHeight * 0.25 ],
-        strokeColor: '#aaddff'
-    } );
+    }, styles.backgroundLineStyle ) );
     var anglevector = new paper.Point( {
         angle: -60,
         length: window.innerHeight * 0.58
@@ -257,17 +300,20 @@ function createBackground() {
         y: window.innerHeight * 0.75
     } );
     for ( var i = 0; i < 80; i++ ) {
-        bg.addChild( new paper.Path.Line( {
+        bg.addChild( new paper.Path.Line( Object.assign( {
             from: anglepoint.clone(),
-            to: anglepoint.clone().add( anglevector ),
-            strokeColor: '#aaddff'
-        } ) );
+            to: anglepoint.clone().add( anglevector )
+        }, styles.backgroundLineStyle ) ) );
         anglepoint.x += window.innerWidth / 50;
     }
     bg.addChild( baseline );
     bg.addChild( midline );
     paper.project.insertLayer( 0, bg );
     paper.project.layers.letter.activate();
+}
+
+function setColorScheme() {
+
 }
 
 function animate( time ) {
@@ -321,8 +367,11 @@ window.onload = function() {
 
     paper.project.activeLayer.name = 'letter';
 
+    var darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    styles = darkModeMediaQuery.matches ? negativeStyles : positiveStyles;
+
     createBackground();
-    window.addEventListener( 'resize', createBackground )
+    window.addEventListener( 'resize', createBackground );
 
     var f = new Font().load( () => {
 
@@ -365,6 +414,13 @@ window.onload = function() {
         letterLabelEl.innerText = f.letterList[ f.currentLetter ];
 
         requestAnimationFrame( animate );
+
+        darkModeMediaQuery.addListener((e) => {
+            styles = e.matches ? negativeStyles : positiveStyles;
+            createBackground();
+            f.reapplyStyles();
+            redrawPhase();
+        });
 
         canvasEl.addEventListener( 'mousedown', ondown );
         canvasEl.addEventListener( 'mouseup', onup );

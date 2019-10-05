@@ -119,3 +119,19 @@ html, body {
     color: black;
     pointer-events: none;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: #efefef;
+    }
+    .button {
+        color: #f55b5b;
+    }
+    .button:hover {
+        color: #efefef;
+    }
+    #information p {
+        background: rgba( 0, 0, 0, 0.8 );
+    }
+}
