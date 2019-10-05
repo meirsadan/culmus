@@ -60,6 +60,7 @@ class Stroke {
         var phaseMiddle = Math.floor( phase.segments.length / 2 );
         var pen = new paper.Path( [ phase.segments[ phaseMiddle - 1 ], phase.segments[ phaseMiddle ] ] );
         var angle = Math.round( 120 + pen.segments[1].point.subtract( pen.segments[0].point ).angle );
+        if ( angle > 180 ) angle -= 180;
         var angleLabel = new paper.PointText( {
             point: pen.bounds.center.clone().add( 10, 0 ),
             content: angle + '°',
@@ -184,7 +185,7 @@ class Font {
     }
 
     centerLetter() {
-        console.log( this.g.bounds );
+        // console.log( this.g.bounds );
         this.g.position.x = window.innerWidth / 2;
         this.g.position.y = window.innerHeight / 2;
         this.letters.forEach( letter => letter.centerLetter() );
@@ -215,6 +216,13 @@ class Font {
         }
     }
 
+    setCurrentLetter( char ) {
+        var idx = this.letterList.indexOf( char );
+        if ( idx > -1 ) {
+            this.currentLetter = idx;
+        }
+    }
+
     getCurrentLetterPhase( offset ) {
         return this.letters[ this.currentLetter ].getPhase( offset );
     }
@@ -223,8 +231,8 @@ class Font {
 
 function createBackground() {
     var bg;
-    if ( paper.project.layers[ 'background' ] ) {
-        bg = paper.project.layers[ 'background' ];
+    if ( 'background' in paper.project.layers ) {
+        bg = paper.project.layers.background;
         bg.removeChildren();
     } else {
         bg = new paper.Layer();
@@ -269,6 +277,36 @@ function animate( time ) {
     
 window.onload = function() {
 
+    var keyCodeMap = {
+        KeyA: 'ש',
+        KeyB: 'נ',
+        KeyC: 'ב',
+        KeyD: 'ג',
+        KeyE: 'ק',
+        KeyF: 'כ',
+        KeyG: 'ע',
+        KeyH: 'י',
+        KeyI: 'ן',
+        KeyJ: 'ח',
+        KeyK: 'ל',
+        KeyL: 'ך',
+        KeyM: 'צ',
+        KeyN: 'מ',
+        KeyO: 'ם',
+        KeyP: 'פ',
+        KeyR: 'ר',
+        KeyS: 'ס',
+        KeyT: 'א',
+        KeyU: 'ו',
+        KeyV: 'ה',
+        KeyX: 'ס',
+        KeyY: 'ט',
+        KeyZ: 'ז',
+        Period: 'ץ',
+        Comma: 'ת',
+        Semicolon: 'ף'
+    };
+
     var canvasEl = document.getElementById( 'calligrapherCanvas' );
     var letterLabelEl = document.getElementById( 'letterLabel' );
     var previousButtonEl = document.getElementById( 'previousButton' );
@@ -293,6 +331,7 @@ window.onload = function() {
         var phase = { offset: 0 };
         var down = false;
         var t_o;
+        var infoActive = false;
 
         var getDuration = () => {
             return f.letters[ f.currentLetter ].length * ( 1000 / window.innerHeight ) * 2;
@@ -367,10 +406,41 @@ window.onload = function() {
             phase.offset = 0;
             tween.to( { offset: 1 }, getDuration() ).start();
         } );
+        
+        infoEl.addEventListener( 'click', e => {
+            if ( infoActive ) {
+                infoActive = false;
+                infoEl.className = '';    
+            }
+        } );
 
         infoButtonEl.addEventListener( 'click', e => {
             e.preventDefault();
-            infoEl.className = infoEl.className == 'active' ? '' : 'active';
+            infoActive = !infoActive;
+            infoEl.className = infoActive ? 'active' : '';
+        }, true );
+
+        document.addEventListener( 'keydown', e => {
+            if ( e.code in keyCodeMap ) {
+                f.setCurrentLetter( keyCodeMap[ e.code ] );
+                phase.offset = 0;
+                tween.to( { offset: 1 }, getDuration() ).start();
+            } else {
+                switch ( e.code ) {
+                    case 'ArrowLeft':
+                        f.nextLetter();
+                        phase.offset = 0;
+                        tween.to( { offset: 1 }, getDuration() ).start();
+                        letterLabelEl.innerText = f.letterList[ f.currentLetter ];
+                        break;
+                    case 'ArrowRight':
+                        f.previousLetter();
+                        phase.offset = 0;
+                        tween.to( { offset: 1 }, getDuration() ).start();
+                        letterLabelEl.innerText = f.letterList[ f.currentLetter ];
+                        break;                        
+                }
+            }
         } );
 
     } );

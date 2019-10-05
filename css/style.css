@@ -26,6 +26,8 @@ html, body {
     top: 50%;
     width: 40px; height: 20px;
     margin-top: -10px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
     color: #ff0000;
@@ -34,20 +36,19 @@ html, body {
 
 .button#previousButton {
     right: 5px;
-    padding: 0 5px 0 0;
 }
 
 .button#previousButton:before {
-    content: "→";
+    content: "\279c";
+    content: ">";
 }
 
 .button#nextButton {
     left: 5px;
-    padding: 0 0 0 5px;
 }
 
 .button#nextButton:before {
-    content: "←";
+    content: "<";
 }
 
 .button#reverseButton {
@@ -79,7 +80,7 @@ html, body {
 }
 
 .button:hover {
-    padding: 0 !important;
+    color: black;
 }
 
 #information {
@@ -112,9 +113,9 @@ html, body {
     bottom: 8vh;
     left: 0; right: 0;
     font-family: "CalligrapherFont", "Courier New", monospace;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: #aaddff;
+    color: black;
     pointer-events: none;
 }
