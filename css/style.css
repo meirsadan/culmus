@@ -26,6 +26,8 @@ html, body {
     top: 50%;
     width: 40px; height: 20px;
     margin-top: -10px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
     color: #ff0000;
@@ -34,27 +36,26 @@ html, body {
 
 .button#previousButton {
     right: 5px;
-    padding: 0 5px 0 0;
 }
 
 .button#previousButton:before {
-    content: "→";
+    content: "\279c";
+    content: ">";
 }
 
 .button#nextButton {
     left: 5px;
-    padding: 0 0 0 5px;
 }
 
 .button#nextButton:before {
-    content: "←";
+    content: "<";
 }
 
 .button#reverseButton {
     top: auto; bottom: 15px;
     left: 5px;
     font-family: "Courier New", monospace;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -66,19 +67,71 @@ html, body {
     content: "L";
 }
 
-.button:hover {
-    padding: 0 !important;
+.button#infoButton {
+    top: auto; bottom: 15px;
+    right: 5px;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    font-weight: bold;
 }
 
+.button#infoButton:before {
+    content: "?";
+}
+
+.button:hover {
+    color: black;
+}
+
+#information {
+    position: fixed;
+    top: -500px;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    transition: top 250ms;
+}
+
+#information.active {
+    top: 15px;
+}
+
+#information p {
+    max-width: 480px;
+    background: rgba( 255, 255, 255, 0.8 );
+    border: 1px solid #aaddff;
+    border-radius: 16px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 16px;
+    margin: 16px auto;
+}
 
 .letter-label {
     position: absolute;
     bottom: 8vh;
     left: 0; right: 0;
     font-family: "CalligrapherFont", "Courier New", monospace;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: #aaddff;
+    color: black;
     pointer-events: none;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: #efefef;
+    }
+    .button {
+        color: #f55b5b;
+    }
+    .button:hover {
+        color: #efefef;
+    }
+    #information p {
+        background: rgba( 0, 0, 0, 0.8 );
+    }
 }
