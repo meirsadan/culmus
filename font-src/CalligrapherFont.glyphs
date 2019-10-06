@@ -110,7 +110,7 @@ unicode = 05D0;
 },
 {
 glyphname = "bet-hb";
-lastChange = "2019-10-03 20:55:09 +0000";
+lastChange = "2019-10-06 12:14:49 +0000";
 layers = (
 {
 backgroundImage = {
@@ -124,10 +124,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"167 568 LINE",
-"126 500 LINE",
 "145 420 LINE",
-"186 488 LINE"
+"186 488 LINE",
+"167 568 LINE",
+"126 500 LINE"
 );
 },
 {
@@ -213,7 +213,7 @@ unicode = 05D2;
 },
 {
 glyphname = "dalet-hb";
-lastChange = "2019-10-03 20:58:13 +0000";
+lastChange = "2019-10-06 12:14:59 +0000";
 layers = (
 {
 backgroundImage = {
@@ -227,10 +227,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"144 568 LINE",
-"103 500 LINE",
 "122 420 LINE",
-"163 488 LINE"
+"163 488 LINE",
+"144 568 LINE",
+"103 500 LINE"
 );
 },
 {
@@ -259,7 +259,7 @@ unicode = 05D3;
 },
 {
 glyphname = "he-hb";
-lastChange = "2019-10-03 20:55:05 +0000";
+lastChange = "2019-10-06 12:15:09 +0000";
 layers = (
 {
 backgroundImage = {
@@ -273,10 +273,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"167 568 LINE",
-"126 500 LINE",
 "145 420 LINE",
-"186 488 LINE"
+"186 488 LINE",
+"167 568 LINE",
+"126 500 LINE"
 );
 },
 {
@@ -413,7 +413,7 @@ unicode = 05D6;
 },
 {
 glyphname = "het-hb";
-lastChange = "2019-10-03 20:57:53 +0000";
+lastChange = "2019-10-06 12:15:19 +0000";
 layers = (
 {
 backgroundImage = {
@@ -427,10 +427,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"174 568 LINE",
-"133 500 LINE",
 "152 420 LINE",
-"193 488 LINE"
+"193 488 LINE",
+"174 568 LINE",
+"133 500 LINE"
 );
 },
 {
@@ -582,7 +582,7 @@ unicode = 05D9;
 },
 {
 glyphname = "finalkaf-hb";
-lastChange = "2019-10-03 20:55:19 +0000";
+lastChange = "2019-10-06 12:15:29 +0000";
 layers = (
 {
 backgroundImage = {
@@ -596,10 +596,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"147 568 LINE",
-"106 500 LINE",
 "125 420 LINE",
-"166 488 LINE"
+"166 488 LINE",
+"147 568 LINE",
+"106 500 LINE"
 );
 },
 {
@@ -628,7 +628,7 @@ unicode = 05DA;
 },
 {
 glyphname = "kaf-hb";
-lastChange = "2019-10-03 20:57:56 +0000";
+lastChange = "2019-10-06 12:15:35 +0000";
 layers = (
 {
 backgroundImage = {
@@ -642,10 +642,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"167 568 LINE",
-"126 500 LINE",
 "145 420 LINE",
-"186 488 LINE"
+"186 488 LINE",
+"167 568 LINE",
+"126 500 LINE"
 );
 },
 {
@@ -686,14 +686,14 @@ unicode = 05DB;
 },
 {
 glyphname = "lamed-hb";
-lastChange = "2019-10-03 21:13:46 +0000";
+lastChange = "2019-10-03 21:21:21 +0000";
 layers = (
 {
 backgroundImage = {
 crop = "{{0, 0}, {600, 1000}}";
 imagePath = "../../../../fontDesign/Calligraphy/Calligraphy in Glyphs/img/img/lamed-hb.jpg";
 locked = "1";
-transform = "{1, 0, 0, 1, 0, -235}";
+transform = "{1, 0, 0, 1, -10, -235}";
 };
 layerId = "4B1D62E6-7BFF-465E-AFDB-BC9AB18DC79E";
 paths = (
@@ -707,20 +707,20 @@ nodes = (
 "75 425 OFFCURVE",
 "99 410 OFFCURVE",
 "137 410 CURVE SMOOTH",
-"315 410 LINE SMOOTH",
-"363 410 OFFCURVE",
-"385 400 OFFCURVE",
-"385 342 CURVE SMOOTH",
-"385 280 OFFCURVE",
-"383 238 OFFCURVE",
-"366 180 CURVE",
-"452 278 LINE",
-"467 322 OFFCURVE",
-"469 364 OFFCURVE",
-"469 410 CURVE SMOOTH",
-"469 470 OFFCURVE",
-"438 500 OFFCURVE",
-"367 500 CURVE SMOOTH",
+"305 410 LINE SMOOTH",
+"353 410 OFFCURVE",
+"375 400 OFFCURVE",
+"375 342 CURVE SMOOTH",
+"375 280 OFFCURVE",
+"373 238 OFFCURVE",
+"356 180 CURVE",
+"442 278 LINE",
+"457 322 OFFCURVE",
+"459 364 OFFCURVE",
+"459 410 CURVE SMOOTH",
+"459 470 OFFCURVE",
+"428 500 OFFCURVE",
+"357 500 CURVE SMOOTH",
 "179 500 LINE SMOOTH",
 "157 500 OFFCURVE",
 "151 510 OFFCURVE",
@@ -735,25 +735,25 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"215 12 OFFCURVE",
-"317 58 OFFCURVE",
-"411 191 CURVE",
-"452 278 LINE",
-"367 184 OFFCURVE",
-"278 123 OFFCURVE",
-"152 90 CURVE",
-"115 -9 LINE"
+"205 12 OFFCURVE",
+"307 58 OFFCURVE",
+"401 191 CURVE",
+"442 278 LINE",
+"357 184 OFFCURVE",
+"268 123 OFFCURVE",
+"142 90 CURVE",
+"105 -9 LINE"
 );
 }
 );
-width = 530;
+width = 520;
 }
 );
 unicode = 05DC;
 },
 {
 glyphname = "finalmem-hb";
-lastChange = "2019-10-03 20:57:50 +0000";
+lastChange = "2019-10-06 12:15:44 +0000";
 layers = (
 {
 backgroundImage = {
@@ -767,10 +767,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"167 568 LINE",
-"126 500 LINE",
 "145 420 LINE",
-"186 488 LINE"
+"186 488 LINE",
+"167 568 LINE",
+"126 500 LINE"
 );
 },
 {
@@ -991,7 +991,7 @@ unicode = 05E0;
 },
 {
 glyphname = "samekh-hb";
-lastChange = "2019-10-03 20:26:30 +0000";
+lastChange = "2019-10-06 12:15:53 +0000";
 layers = (
 {
 backgroundImage = {
@@ -1005,10 +1005,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"144 568 LINE",
-"103 500 LINE",
 "122 420 LINE",
-"163 488 LINE"
+"163 488 LINE",
+"144 568 LINE",
+"103 500 LINE"
 );
 },
 {
@@ -1345,7 +1345,7 @@ unicode = 05E6;
 },
 {
 glyphname = "qof-hb";
-lastChange = "2019-10-03 20:58:54 +0000";
+lastChange = "2019-10-06 12:16:06 +0000";
 layers = (
 {
 backgroundImage = {
@@ -1359,10 +1359,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"166 568 LINE",
-"123 500 LINE",
 "142 420 LINE",
-"183 488 LINE"
+"183 488 LINE",
+"166 568 LINE",
+"123 500 LINE"
 );
 },
 {
@@ -1420,7 +1420,7 @@ unicode = 05E7;
 },
 {
 glyphname = "resh-hb";
-lastChange = "2019-10-03 20:55:33 +0000";
+lastChange = "2019-10-06 12:16:13 +0000";
 layers = (
 {
 backgroundImage = {
@@ -1434,10 +1434,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"137 568 LINE",
-"96 500 LINE",
 "115 420 LINE",
-"156 488 LINE"
+"156 488 LINE",
+"137 568 LINE",
+"96 500 LINE"
 );
 },
 {
@@ -1546,7 +1546,7 @@ unicode = 05E9;
 },
 {
 glyphname = "tav-hb";
-lastChange = "2019-10-03 20:59:44 +0000";
+lastChange = "2019-10-06 12:16:24 +0000";
 layers = (
 {
 backgroundImage = {
@@ -1560,10 +1560,10 @@ paths = (
 {
 closed = 1;
 nodes = (
-"197 568 LINE",
-"156 500 LINE",
 "179 420 LINE",
-"220 488 LINE"
+"220 488 LINE",
+"197 568 LINE",
+"156 500 LINE"
 );
 },
 {
