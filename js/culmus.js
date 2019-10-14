@@ -555,7 +555,7 @@ window.onload = function() {
             tween.to( { offset: 1 }, getDuration() ).start();
             // Update letter label
             letterLabelEl.innerText = f.letterList[ f.currentLetter ];
-        }
+        };
 
         // Set up tween animation
         var tween = new TWEEN.Tween( phase )
@@ -585,7 +585,7 @@ window.onload = function() {
         canvasEl.addEventListener( 'mousemove', e => {
             if ( !down ) return;
             tween.stop();
-            phase.offset = ( ( 1 - e.clientX / window.innerWidth ) * 1.5 ) - 0.25;
+            phase.offset = ( ( e.clientX / window.innerWidth ) * 1.5 ) - 0.25;
             redrawPhase();
         } );
 
@@ -595,7 +595,7 @@ window.onload = function() {
         // Handler for touch move event – stop animation and change offset according to touch position
         canvasEl.addEventListener( 'touchmove', e => {
             tween.stop();
-            phase.offset = ( ( 1 - e.touches[0].clientX / window.innerWidth ) * 1.5 ) - 0.25;
+            phase.offset = ( ( e.touches[0].clientX / window.innerWidth ) * 1.5 ) - 0.25;
             redrawPhase();
         } );
 
