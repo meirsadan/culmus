@@ -84,6 +84,7 @@ html, body {
 }
 
 #information {
+    direction: rtl;
     position: fixed;
     top: -500px;
     width: 100%;
