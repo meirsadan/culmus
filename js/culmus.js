@@ -4,7 +4,7 @@
 // (c) 2019 Meir Sadan
 // This code may be freely distributed under the MIT license.
 // For all details and documentation:
-// http://github.com/meirsadan/culmus-js
+// http://github.com/meirsadan/culmus
 
 // This script uses these libraries as dependencies:
 // Opentype.js: for loading path data from font file
