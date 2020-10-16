@@ -10,10 +10,17 @@ html, body {
     height: 100%;
 }
 
-#calligrapherCanvas {
+#playground {
     position: fixed;
     top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    right: 200px; bottom: 0;
+    height: 100vh;
+    cursor: grab;
+}
+
+#calligrapherCanvas {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100vh;
     cursor: grab;
 }
 
@@ -119,6 +126,13 @@ html, body {
     text-align: center;
     color: black;
     pointer-events: none;
+}
+
+#discussion {
+    position: absolute;
+    top: 0; bottom: 0; right: 0; width: 100%; max-width: 200px;
+    border-left: 1px solid #c0c0c0;
+    background-color: white;
 }
 
 @media screen and (prefers-color-scheme: dark) {

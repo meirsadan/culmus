@@ -103,6 +103,8 @@ var darkStyles = {
     }
 };
 
+var calligraphyContainerEl = document.body;
+
 // Stroke Class
 // Analyzes and draws individual stroke paths (as outlines)
 // and their interpolated drawing phases
@@ -258,7 +260,7 @@ class Letter {
     }
     // Centers the letter horizontally
     centerLetter() {
-        this.g.position.x = window.innerWidth / 2;
+        this.g.position.x = calligraphyContainerEl.offsetWidth / 2;
     }
     // Reverses stroke objects for backward phase interpolation
     reversePaths() {
@@ -486,6 +488,7 @@ window.onload = function() {
     var reverseButtonEl = document.getElementById( 'reverseButton' );
     var infoButtonEl = document.getElementById( 'infoButton' );
     var infoEl = document.getElementById( 'information' );
+    calligraphyContainerEl = document.getElementById( 'playground' );
 
     // Start up paper.js
     paper.setup( "calligrapherCanvas" );
@@ -585,7 +588,7 @@ window.onload = function() {
         canvasEl.addEventListener( 'mousemove', e => {
             if ( !down ) return;
             tween.stop();
-            phase.offset = ( ( e.clientX / window.innerWidth ) * 1.5 ) - 0.25;
+            phase.offset = ( ( e.clientX / calligraphyContainerEl.offsetWidth ) * 1.5 ) - 0.25;
             redrawPhase();
         } );
 
@@ -595,7 +598,7 @@ window.onload = function() {
         // Handler for touch move event – stop animation and change offset according to touch position
         canvasEl.addEventListener( 'touchmove', e => {
             tween.stop();
-            phase.offset = ( ( e.touches[0].clientX / window.innerWidth ) * 1.5 ) - 0.25;
+            phase.offset = ( ( e.touches[0].clientX / calligraphyContainerEl.offsetWidth ) * 1.5 ) - 0.25;
             redrawPhase();
         } );
 

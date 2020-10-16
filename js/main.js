@@ -83,7 +83,7 @@ Object.assign( Calligrapher.Pen.prototype, {
         incoming.closed = true;
         incoming.fillColor = undefined;
         console.log( incoming );
-        incoming.addTo( paper.project.activeLayer )
+        incoming.addTo( paper.project.activeLayer );
         return incoming;
         console.log( incoming.segments, outgoing.segments );
 
