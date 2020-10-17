@@ -11,6 +11,7 @@
         <meta property="og:image" content="https://culmus.xyz/screenshot.png">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -28,15 +29,76 @@
             <a href="#" class="button" id="nextButton"></a>
             <a href="#" class="button" id="reverseButton"></a>
             <a href="#" class="button" id="infoButton"></a>
+            <a href="#" class="button" id="tipsButton"></a>
 
         </div>
 
-        <div id="discussion"></div>
+        <div id="discussion">
+            <div id="tips_list"></div>
+            <div class="tip add-tip">
+                <a href="#" id="add_tip_link">רוצה להציע טיפ</a>
+            </div>
+        </div>
+
+        <form id="add_tip_form">
+            <p>
+            <label>
+                <span class="label-text">לאיזו אות הטיפ מתייחס</span>
+                <select id="add_tip_character" name="character" required>
+                    <option value="">בחרו</option>
+                    <option>א</option>
+                    <option>ב</option>
+                    <option>ג</option>
+                    <option>ד</option>
+                    <option>ה</option>
+                    <option>ו</option>
+                    <option>ז</option>
+                    <option>ח</option>
+                    <option>ט</option>
+                    <option>י</option>
+                    <option>ך</option>
+                    <option>כ</option>
+                    <option>ל</option>
+                    <option>ם</option>
+                    <option>מ</option>
+                    <option>ן</option>
+                    <option>נ</option>
+                    <option>ס</option>
+                    <option>ע</option>
+                    <option>ף</option>
+                    <option>פ</option>
+                    <option>ץ</option>
+                    <option>צ</option>
+                    <option>ק</option>
+                    <option>ר</option>
+                    <option>ש</option>
+                    <option>ת</option>
+                </select>
+            </label>
+            <label>
+                <span class="label-text">הטיפ שלכם</span>
+                <textarea id="add_tip_content" name="content" required></textarea>
+            </label>
+            <label>
+                <span class="label-text">השם שלכם</span>
+                <input type="text" id="add_tip_author" name="author" required>
+            </label>
+            <label>
+                <input type="submit" id="add_tip_submit" value="שלח">
+            </label>
+            </p>
+        </form>
+
+        <div id="thank_you">
+            <p>תודה שהצעת טיפ!<br>הטיפ עבר אלינו לבדיקה, ואם נראה שהוא מתאים אז נוסיף אותו לאתר.</p>
+        </div>
 
         <div id="information">
             <p><b>עט קליגרפית אינטרקטיבית.</b> אתר זה מדגים כתיבה באותיות עבריות פורמליות בסגנון ״דוד״. לחצו על החצים לניווט בין האותיות. גררו את העכבר או הזיזו את האצבע על גבי האות כדי לעצור את ההדגמה בנקודות שונות. זווית העט מוצגת באדום בזמן שהאות מצטיירת. לחצו על האות מימין למטה כדי לשנות כיוון כתיבה (יד דומיננטית ימין/שמאל).</p>
             <p>אתר זה נוצר ע״י דניאל גרומר ומאיר סדן כעזר הוראה במחלקה לתקשורת חזותית, בצלאל.</p>
         </div>
+
+        <div id="background_overlay"></div>
 
         <script src="js/vendor/jquery-3.5.1.min.js"></script>
         <script src="js/vendor/opentype.min.js"></script>

@@ -8,12 +8,13 @@ html, body {
     margin: 0;
     overflow: hidden;
     height: 100%;
+    font-family: "Miriam Libre", "Courier New", monospace;
 }
 
 #playground {
     position: fixed;
     top: 0; left: 0;
-    right: 200px; bottom: 0;
+    right: 0; bottom: 0;
     height: 100vh;
     cursor: grab;
 }
@@ -33,12 +34,15 @@ html, body {
     top: 50%;
     width: 40px; height: 20px;
     margin-top: -10px;
-    font-family: "Courier New", monospace;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     color: #ff0000;
     transition: padding 150ms;
+}
+
+.button#tipsButton {
+    display: none;
 }
 
 .button#previousButton {
@@ -77,7 +81,6 @@ html, body {
 .button#infoButton {
     top: auto; bottom: 15px;
     right: 5px;
-    font-family: "Courier New", monospace;
     font-size: 16px;
     font-weight: bold;
 }
@@ -90,9 +93,25 @@ html, body {
     color: black;
 }
 
+#background_overlay {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    z-index: 50;
+    pointer-events: none;
+}
+
+#background_overlay.active {
+    background-color: rgba( 255, 255, 255, 0.5 );
+    pointer-events: all;
+}
+
+#thank_you,
+#add_tip_form,
 #information {
     direction: rtl;
     position: fixed;
+    z-index: 100;
     top: -500px;
     width: 100%;
     padding: 0 16px;
@@ -100,20 +119,51 @@ html, body {
     transition: top 250ms;
 }
 
+#add_tip_form {
+    pointer-events: none;
+}
+
+#thank_you.active,
+#add_tip_form.active,
 #information.active {
     top: 15px;
 }
 
-#information p {
+#thank_you p,
+#information p,
+#add_tip_form p {
+    display: block;
     max-width: 480px;
     background: rgba( 255, 255, 255, 0.8 );
     border: 1px solid #aaddff;
     border-radius: 16px;
-    font-family: "Courier New", monospace;
     font-size: 14px;
     line-height: 1.4;
     padding: 16px;
     margin: 16px auto;
+    pointer-events: all;
+}
+
+#thank_you p {
+    cursor: pointer;
+}
+
+#add_tip_form label {
+    display: flex;
+    border-bottom: 1px solid #aaddff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#add_tip_form label:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    justify-content: flex-end;
+}
+
+#add_tip_form label .label-text {
+    flex-basis: 150px;
 }
 
 .letter-label {
@@ -130,9 +180,49 @@ html, body {
 
 #discussion {
     position: absolute;
-    top: 0; bottom: 0; right: 0; width: 100%; max-width: 200px;
-    border-left: 1px solid #c0c0c0;
-    background-color: white;
+    top: 20px; bottom: 0; right: 40px; width: 100%; max-width: 200px;
+    /* border-left: 1px solid #c0c0c0; */
+    /* background-color: white; */
+    pointer-events: none;
+}
+
+#discussion .tip {
+    pointer-events: all;
+    direction: rtl;
+    max-width: 480px;
+    background: #aaddff;
+    border: 1px solid #aaddff;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px;
+    margin: 8px;
+}
+
+#discussion .tip .tip-author {
+    font-size: 10px;
+    margin: 4px 0 0;
+    text-align: left;
+}
+
+@media screen and (max-width: 720px) {
+    .button#tipsButton {
+        top: 15px;
+        right: 5px;
+        margin: 0;
+        display: block;
+    }
+    
+    .button#tipsButton:before {
+        content: "!";
+    }
+    #discussion {
+        right: -100%;
+        transition: right 250ms;
+    }
+    #discussion.active {
+        right: 40px;
+    }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -146,7 +236,12 @@ html, body {
     .button:hover {
         color: #efefef;
     }
-    #information p {
-        background: rgba( 0, 0, 0, 0.8 );
+    #background_overlay.active {
+        background-color: rgba( 0, 0, 0, 0.5 );
+        pointer-events: all;
+    }
+    #information p,
+    #add_tip_form label {
+            background: rgba( 0, 0, 0, 0.8 );
     }
 }

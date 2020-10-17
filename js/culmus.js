@@ -46,6 +46,9 @@ var keyCodeMap = {
 // according to selected color theme (light/dark)
 var styles = {};
 
+// Tips library - loaded from API
+var tips = {};
+
 // Style library for light color scheme
 var lightStyles = {
     // Style instructions for main letter paths
@@ -480,6 +483,31 @@ function animate( time ) {
 // Start application once document fully loads
 window.onload = function() {
 
+    $.get( {
+        url: "https://api.culmus.xyz/culmus/items/tips",
+        cache: false,
+        dataType: 'json',
+        success( data ) {
+            if ( 'data' in data && 'length' in data.data ) {
+                data.data.forEach( item => {
+                    if ( !(item.character in tips) ) {
+                        tips[ item.character ] = [];
+                    }
+                    tips[ item.character ].push( {
+                        content: item.content,
+                        author: item.author
+                    } );
+                } );
+            }
+            window.afterAPILoad();
+        }
+    } );
+    console.log( tips );
+
+};
+
+window.afterAPILoad  = function() {
+
     // Define HTML elements for interface
     var canvasEl = document.getElementById( 'calligrapherCanvas' );
     var letterLabelEl = document.getElementById( 'letterLabel' );
@@ -487,7 +515,15 @@ window.onload = function() {
     var nextButtonEl = document.getElementById( 'nextButton' );
     var reverseButtonEl = document.getElementById( 'reverseButton' );
     var infoButtonEl = document.getElementById( 'infoButton' );
+    var tipsButtonEl = document.getElementById( 'tipsButton' );
     var infoEl = document.getElementById( 'information' );
+    var discussionWrapperEl = document.getElementById( 'discussion' );
+    var discussionEl = document.getElementById( 'tips_list' );
+    var addTipLinkEl = document.getElementById( 'add_tip_link' );
+    var addTipFormEl = document.getElementById( 'add_tip_form' );
+    var addTipCharacterEl = document.getElementById( 'add_tip_character' );
+    var thankYouEl = document.getElementById( 'thank_you' );
+    var backgroundOverlayEl = document.getElementById( 'background_overlay' );
     calligraphyContainerEl = document.getElementById( 'playground' );
 
     // Start up paper.js
@@ -517,7 +553,9 @@ window.onload = function() {
             // Timeout ID for pausing the animation
             t_o,
             // Indicates whether information window is shown or not
-            infoActive = false;
+            infoActive = false,
+            
+            addTipActive = false;
             
         // Gets drawing animation duration for current letter
         var getDuration = () => {
@@ -560,14 +598,28 @@ window.onload = function() {
             letterLabelEl.innerText = f.letterList[ f.currentLetter ];
         };
 
+        var refreshDiscussion = () => {
+            discussionEl.innerHTML = '';
+            if ( f.letterList[ f.currentLetter ] in tips ) {
+                var tipsHTML = '';
+                tips[ f.letterList[ f.currentLetter ] ].forEach( tip => {
+                    tipsHTML += `<div class="tip"><div class="tip-content">${tip.content}</div><div class="tip-author">${tip.author}</div></div>`;
+                } );
+                discussionEl.innerHTML = tipsHTML;
+            }    
+        }
+
         // Set up tween animation
         var tween = new TWEEN.Tween( phase )
             .to( { offset: 1 }, getDuration() )
             .onUpdate( () => redrawPhase() )
             .start();
-            
+        
         // Set up letter label
         letterLabelEl.innerText = f.letterList[ f.currentLetter ];
+
+        // Set up discussion sidebar
+        refreshDiscussion();
 
         // Start animation
         requestAnimationFrame( animate );
@@ -609,6 +661,7 @@ window.onload = function() {
             f.previousLetter();
             // Restart tween animation
             restartTween();
+            refreshDiscussion();
         } );
 
         // Listen to clicks on Next button
@@ -618,6 +671,7 @@ window.onload = function() {
             f.nextLetter();
             // Restart tween animation
             restartTween();
+            refreshDiscussion();
         } );
 
         // Listen to clicks on Reverse writing direction button
@@ -640,6 +694,47 @@ window.onload = function() {
             }
         } );
 
+        addTipLinkEl.addEventListener( 'click', e => {
+            e.preventDefault();
+            // Toggle information element
+            addTipActive = !addTipActive;
+            addTipFormEl.className = addTipActive ? 'active' : '';           
+            backgroundOverlayEl.className = addTipActive ? 'active' : ''; 
+            addTipCharacterEl.value = f.letterList[ f.currentLetter ];
+        });
+
+        addTipFormEl.addEventListener( 'submit', e => {
+            e.preventDefault();
+            $.post( {
+                url: "https://api.culmus.xyz/culmus/items/tips",
+                data: $( addTipFormEl ).serialize(),
+                success( data ) {
+                    if ( 'public' in data && data.public === true ) {
+                        thankYouEl.className = 'active';
+                        document.getElementById( 'add_tip_content' ).value = '';
+                    } else {
+                        addTipActive = true;
+                        addTipFormEl.className = 'active';           
+                        backgroundOverlayEl.className = 'active';
+                    }
+                }
+            } );
+            addTipActive = false;
+            addTipFormEl.className = '';           
+            backgroundOverlayEl.className = '';
+        } );
+
+        thankYouEl.addEventListener( 'click', e => {
+            thankYouEl.className = '';
+        } );
+
+        backgroundOverlayEl.addEventListener( 'click', e => {
+            // Toggle information element
+            addTipActive = false;
+            addTipFormEl.className = '';           
+            backgroundOverlayEl.className = ''; 
+        } );
+
         // Listen to clicks on information button
         infoButtonEl.addEventListener( 'click', e => {
             e.preventDefault();
@@ -648,13 +743,20 @@ window.onload = function() {
             infoEl.className = infoActive ? 'active' : '';
         }, true );
 
+        tipsButtonEl.addEventListener( 'click', e => {
+            e.preventDefault();
+            discussionWrapperEl.className = discussionWrapperEl.className ? '' : 'active';
+        } );
+
         // Listen to keyboard key event
         document.addEventListener( 'keydown', e => {
+            if ( e.target.tagName == 'INPUT' || e.target.tagName == 'TEXTAREA' ) return;
             if ( e.code in keyCodeMap ) {
                 // If letter was pressed, set current letter
                 f.setCurrentLetter( keyCodeMap[ e.code ] );
                 // Restart tween animation
                 restartTween();
+                refreshDiscussion();
             } else {
                 switch ( e.code ) {
                     case 'ArrowLeft':
@@ -662,12 +764,14 @@ window.onload = function() {
                         f.nextLetter();
                         // Restart tween animation
                         restartTween();
+                        refreshDiscussion();
                         break;
                     case 'ArrowRight':
                         // If right arrow was pressed, select previous letter
                         f.previousLetter();
                         // Restart tween animation
                         restartTween();
+                        refreshDiscussion();
                         break;                        
                 }
             }
